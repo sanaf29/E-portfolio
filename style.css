@@ -1063,12 +1063,22 @@ button {
   background: rgba(0, 0, 0, 0.22);
 }
 
+.project-media iframe,
 .project-media video {
   display: block;
   width: 100%;
   max-height: 18rem;
-  object-fit: cover;
   background: #07090c;
+  border: 0;
+}
+
+.project-media iframe {
+  aspect-ratio: 16 / 9;
+  min-height: 16rem;
+}
+
+.project-media video {
+  object-fit: cover;
 }
 
 .project-summary {
