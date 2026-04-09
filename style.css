@@ -626,6 +626,10 @@ button {
   margin-bottom: 1.35rem;
 }
 
+.panel-header.compact {
+  margin-bottom: 1rem;
+}
+
 .panel-kicker {
   margin: 0 0 0.55rem;
   font-size: 0.75rem;
@@ -816,6 +820,173 @@ button {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.about-me-block {
+  margin-top: 1.5rem;
+}
+
+.story-card-grid,
+.story-sections {
+  display: grid;
+  gap: 1rem;
+}
+
+.story-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+
+.story-card {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+  text-align: left;
+  min-height: 12rem;
+  padding: 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(55, 148, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(17, 22, 29, 0.92);
+}
+
+.story-card:hover {
+  border-color: rgba(55, 148, 255, 0.26);
+  transform: translateY(-2px);
+}
+
+.story-card-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.story-card strong {
+  font-size: 1.05rem;
+}
+
+.story-card span:last-child {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.narrative-card p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.narrative-card p + p,
+.narrative-card .project-link {
+  margin-top: 0.95rem;
+}
+
+.certification-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.certification-item {
+  padding: 0.95rem 1rem;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.certification-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.certification-item span {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+
+.certification-item p {
+  color: #d5ddea;
+}
+
+.interest-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1rem;
+  max-width: 42rem;
+}
+
+.interest-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  min-height: 13rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.interest-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 8, 11, 0.02) 0%, rgba(6, 8, 11, 0.16) 45%, rgba(6, 8, 11, 0.86) 100%);
+  pointer-events: none;
+}
+
+.interest-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.08) contrast(1.04);
+  transform: scale(1.02);
+}
+
+.music-card img {
+  object-position: center;
+  background: linear-gradient(180deg, #f5f2ea, #e5ddd2);
+}
+
+.tennis-card img {
+  object-position: center;
+}
+
+.interest-card figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.interest-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #eaf3ff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.interest-card figcaption strong {
+  font-size: 1rem;
+}
+
+.interest-card figcaption span:last-child {
+  font-size: 0.88rem;
+  color: rgba(231, 237, 245, 0.86);
+  line-height: 1.55;
+}
+
 .metric-card {
   padding: 1rem 1.1rem;
 }
@@ -882,6 +1053,22 @@ button {
 
 .project-card {
   min-height: 100%;
+}
+
+.project-media {
+  margin-top: 0.9rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.project-media video {
+  display: block;
+  width: 100%;
+  max-height: 18rem;
+  object-fit: cover;
+  background: #07090c;
 }
 
 .project-summary {
@@ -1080,6 +1267,8 @@ button {
     grid-template-columns: 3.5rem 16.5rem minmax(0, 1fr);
   }
 
+  .interest-gallery,
+  .story-card-grid,
   .hero-grid,
   .education-grid,
   .community-grid,

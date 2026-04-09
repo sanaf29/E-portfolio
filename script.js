@@ -1,9 +1,15 @@
 const fileMeta = {
-  about: {
-    path: "src/about.tsx",
-    status: "about.tsx",
-    command: "$ cat src/about.tsx",
-    output: "Loaded profile, summary, and current focus."
+  main: {
+    path: "src/main.tsx",
+    status: "main.tsx",
+    command: "$ cat src/main.tsx",
+    output: "Loaded landing overview, highlights, and current focus."
+  },
+  aboutme: {
+    path: "src/about-me.tsx",
+    status: "about-me.tsx",
+    command: "$ cat src/about-me.tsx",
+    output: "Opened the longer About Me documentation and personal story."
   },
   experience: {
     path: "src/experience.md",
@@ -54,6 +60,8 @@ const sidebarButtons = document.querySelectorAll(".js-open-sidebar");
 const closeSidebarButton = document.querySelector(".js-close-sidebar");
 const terminalButtons = document.querySelectorAll(".js-toggle-terminal");
 const folderToggles = document.querySelectorAll(".folder-toggle");
+const scrollButtons = document.querySelectorAll("[data-scroll-target]");
+const projectVideos = document.querySelectorAll(".project-media video");
 
 function appendTerminalLine(text, className = "") {
   if (!terminalLog) return;
@@ -151,6 +159,26 @@ folderToggles.forEach((toggle) => {
   });
 });
 
+scrollButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.dataset.scrollTarget;
+    const target = document.getElementById(targetId);
+
+    if (!target) return;
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+projectVideos.forEach((video) => {
+  video.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+});
+
 function syncResponsiveChrome() {
   if (window.innerWidth > 960) {
     appShell.classList.add("sidebar-open");
@@ -161,4 +189,4 @@ function syncResponsiveChrome() {
 
 window.addEventListener("resize", syncResponsiveChrome);
 syncResponsiveChrome();
-setActiveFile("about");
+setActiveFile("main");
