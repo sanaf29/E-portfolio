@@ -232,13 +232,23 @@
 
             <main class="editor">
               <article class="editor-panel active" data-panel="main">
-                <div class="panel-header">
-                  <p class="panel-kicker">// main.tsx</p>
-                  <h1>Sanae Faghfouri</h1>
-                  <p class="panel-subtitle">
-                    Computer Science student, research leader, and full-stack builder creating software
-                    that is organized, useful, and grounded in real-world impact.
-                  </p>
+                <div class="panel-header hero-header">
+                  <figure class="profile-photo">
+                    <span class="profile-initials" aria-hidden="true">SF</span>
+                    <img
+                      src="./profile-photo.jpg"
+                      alt="Professional headshot of Sanae Faghfouri"
+                      onerror="this.remove()"
+                    />
+                  </figure>
+                  <div>
+                    <p class="panel-kicker">// main.tsx</p>
+                    <h1>Sanae Faghfouri</h1>
+                    <p class="panel-subtitle">
+                      Computer Science student, research leader, and full-stack builder creating software
+                      that is organized, useful, and grounded in real-world impact.
+                    </p>
+                  </div>
                 </div>
 
                 <div class="hero-grid">
@@ -319,6 +329,58 @@
                     </div>
                   </section>
                 </div>
+
+                <section class="intro-facts">
+                  <div class="glass-card fact-card">
+                    <p class="card-label">My Program</p>
+                    <strong>B.A. (Honours) Computer Science, Co-op</strong>
+                    <p>York University, Lassonde School of Engineering. Expected graduation Dec 2027.</p>
+                  </div>
+                  <div class="glass-card fact-card">
+                    <p class="card-label">What I Love About My Program</p>
+                    <p>
+                      It balances theory and building. Courses like Software Design, Database Systems, and
+                      Algorithms give me strong foundations, and Lassonde's culture of collaboration and research
+                      let me apply them outside the classroom through the EASE-EAGL Lab, AI4Impact, and YU Blueprint.
+                    </p>
+                  </div>
+                  <div class="glass-card fact-card">
+                    <p class="card-label">Most Rewarding Co-op Learning Experience</p>
+                    <p>
+                      Moving from QA Analyst to Application Developer at HSS Business Solutions. Testing taught me
+                      how systems fail and what "done" really means. I then took that into development, building a
+                      C#/.NET utility that automated report migration and a Vue.js application connected through APIs.
+                      Seeing the full lifecycle, from requirements to release, changed how I write code.
+                    </p>
+                  </div>
+                  <div class="glass-card fact-card">
+                    <p class="card-label">Career Goal</p>
+                    <p>
+                      To become a software engineer focused on backend and intelligent systems, building reliable,
+                      well-tested software that people can depend on, with a long-term interest in applying AI and
+                      automation responsibly.
+                    </p>
+                  </div>
+                </section>
+
+                <section class="glass-card about-video-card" id="about-video">
+                  <p class="card-label">Video: About Me (updated from COOP 2100)</p>
+                  <p class="video-caption">
+                    A short introduction covering who I am, what I've learned since COOP 2100, and the new skills and
+                    experience I've gained through my co-op terms in QA and application development.
+                  </p>
+                  <div class="project-media">
+                    <video
+                      class="media-contain"
+                      src="./about-me-video.mp4"
+                      title="About Me video"
+                      controls
+                      playsinline
+                      preload="metadata"
+                      onerror="this.closest('.about-video-card').remove()"
+                    ></video>
+                  </div>
+                </section>
 
                 <section class="metrics-grid">
                   <div class="metric-card">
@@ -653,6 +715,16 @@
                       <li>Integrated Swagger and Postman for API documentation and testing; collaborated using Git in an Agile sprint-based workflow.</li>
                       <li>Developed the frontend in React and TypeScript using modular components.</li>
                     </ul>
+                    <dl class="project-facts">
+                      <div>
+                        <dt>My role</dt>
+                        <dd>Group project. I contributed to the layered Spring Boot backend, the normalized SQL Server schema, the REST APIs and their Swagger/Postman documentation, and React/TypeScript frontend components, working with my team in Agile sprints using Git.</dd>
+                      </div>
+                      <div>
+                        <dt>Outcome</dt>
+                        <dd>A working full-stack platform with documented, tested APIs (Swagger/Postman) covering authentication, books, reading progress, reviews, and monthly analytics, containerized with Docker.</dd>
+                      </div>
+                    </dl>
                     <!-- TODO: add BookBuddy GitHub link, e.g.
                     <div class="project-links">
                       <a class="project-link" href="https://github.com/sanaf29/REPO" target="_blank" rel="noreferrer">View on GitHub</a>
@@ -691,6 +763,16 @@
                       <li>Designed a responsive interface with DOM-based interactions.</li>
                       <li>Built reusable UI components and responsive layouts with event-driven programming.</li>
                     </ul>
+                    <dl class="project-facts">
+                      <div>
+                        <dt>My role</dt>
+                        <dd>Sole developer: planned the features, built the UI and client-side logic, and handled persistence and responsive design.</dd>
+                      </div>
+                      <div>
+                        <dt>Outcome</dt>
+                        <dd>A shipped, responsive task manager whose data persists across sessions with no backend; source code available on GitHub.</dd>
+                      </div>
+                    </dl>
                     <div class="project-links">
                       <a class="project-link" href="https://github.com/sanaf29/MyPlanner" target="_blank" rel="noreferrer">
                         View on GitHub
@@ -732,6 +814,16 @@
                       <li>Modeling normalized database schemas for users, accounts, transactions, and budgets.</li>
                       <li>Building interactive dashboards in React to visualize spending habits and monthly financial trends.</li>
                     </ul>
+                    <dl class="project-facts">
+                      <div>
+                        <dt>My role</dt>
+                        <dd>Solo project. I designed and built everything: the database schema, the Spring Boot REST APIs and authentication, and the React dashboards.</dd>
+                      </div>
+                      <div>
+                        <dt>Outcome</dt>
+                        <dd>In active development. The demo shows expense tracking, budgeting, and dashboards that visualize monthly spending trends.</dd>
+                      </div>
+                    </dl>
                     <div class="project-links">
                       <a class="project-link" href="https://github.com/sanaf29/Nest-Personal-Finance-Expense-Tracker" target="_blank" rel="noreferrer">
                         View on GitHub
@@ -775,6 +867,16 @@
                       <li>Supabase backend with Postgres row-level security, Realtime sync between phones, and Edge Functions so no secret keys ship in the app.</li>
                       <li>On-device health model trained on CDC NHANES data (AUC 0.81), backed by almost 400 Vitest unit tests.</li>
                     </ul>
+                    <dl class="project-facts">
+                      <div>
+                        <dt>My role</dt>
+                        <dd>Group project at Hack the Valley 11. I worked on the backend and AI integration: the Supabase backend (Postgres, Realtime sync, Edge Functions) and the Gemini- and Twilio-powered Lifeline AI call, all within the 36-hour build.</dd>
+                      </div>
+                      <div>
+                        <dt>Outcome</dt>
+                        <dd>A working demo delivered in 36 hours, with an on-device health model reaching AUC 0.81 and almost 400 passing unit tests.</dd>
+                      </div>
+                    </dl>
                     <div class="project-links">
                       <a class="project-link" href="https://github.com/andre-sidarous/htv11" target="_blank" rel="noreferrer">
                         View on GitHub
@@ -814,6 +916,16 @@
                       <li>Implemented undo and redo functionality using the Command pattern to manage game state transitions.</li>
                       <li>Built AI player strategies such as Random and Greedy to simulate automated gameplay.</li>
                     </ul>
+                    <dl class="project-facts">
+                      <div>
+                        <dt>My role</dt>
+                        <dd>Designed the object-oriented architecture and implemented the game logic, GUI, design patterns, undo/redo, and AI players.</dd>
+                      </div>
+                      <div>
+                        <dt>Outcome</dt>
+                        <dd>A fully playable desktop game with undo/redo and computer opponents, showing practical use of the Strategy, Command, and Visitor patterns.</dd>
+                      </div>
+                    </dl>
                     <!-- TODO: add Othello GitHub link, e.g.
                     <div class="project-links">
                       <a class="project-link" href="https://github.com/sanaf29/REPO" target="_blank" rel="noreferrer">View on GitHub</a>
